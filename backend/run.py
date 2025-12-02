@@ -28,8 +28,8 @@ def predict():
     print(predicted)
 
     if predicted == 0:
-        return "Fail"
+        return jsonify({"prediction": "Fail"})
     elif predicted == 1:
-        return "Pass"
+        return jsonify({"prediction": "Pass"})
     else:
-        return "Something wrong."
+        return jsonify({"prediction": "Something went wrong!"})
