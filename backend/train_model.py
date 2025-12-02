@@ -40,5 +40,8 @@ def generate_and_train():
     print("Saving model to 'model.pkl'...")
     joblib.dump(model, 'model.pkl')
 
+    print("Saving dataset to 'golden_batch.csv'...")
+    df.to_csv('golden_batch.csv', index = False)
+
 if __name__ == "__main__":
     generate_and_train()
